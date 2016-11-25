@@ -16,6 +16,13 @@ gem 'sqlite3', '~> 1.3.12'
 gem 'mysql2', '~> 0.4.4'
 
 ###
+### Models
+###
+
+# Secure and easy tokens
+gem 'has_secure_token', '~> 1.0.0'
+
+###
 ### Controllers and Application Logic
 ###
 
