@@ -42,7 +42,7 @@ To add a model, you first should generate the necessary files.
 ```bash
 rails g model Example name:string description:text
 ```
-You then need to write the rspec tests and validations for that model. See previous models for an example.
+You then need to write the rspec tests and validations for that model. See existing models for an example.
 
 ### Adding abilities
 This project uses the CanCanCan gem for authorization. Therefore, authorization data is stored in the abilities model. Go there and record what users can do with your model. In addition, add some tests for what you added to the User's model's spec.
