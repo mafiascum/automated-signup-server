@@ -8,12 +8,12 @@ rspec
 # Check for style
 rubocop
 ```
-**If you added a gem:**
+If you added a gem:
 ```bash
 # Check the Gemfile for vulnerable gems
 bundle-audit check --update
 ```
-**If you added anything clients directly access:**
+If you added anything users directly access:
 ```bash
 # Check for possible security issues
 brakeman -A
@@ -61,7 +61,7 @@ Finally, you should add some views. Because this is an API, views use the JBuild
 If you're confident in your code, feel free to commit directly to develop on this repository. However, if you're newer to Ruby on Rails, or want to get your code checked out (Which there is **no** shame in doing, and I'll likely even do myself), feel free to open a pull request instead. I or one of the other contributers will check out your changes and suggest any changes that should be made.
 
 ## Tips
-These are tips I've learned through my time working in Rails. They aren't in a particular order, maybe I'll organize them some day, but that day probably isn't today.
+These are tips I've learned through my time working in Rails. They aren't in any particular order.
 
 Please remember, **all code pushed to the develop branch is considered production ready**. If you aren't ready to put it on a production server *right now*, then don't push it to develop. You can (and should) commit it locally, but don't share unfinished work on develop. Use a feature branch or your own repo instead!
 
@@ -73,8 +73,10 @@ When you're writing tests, use FactoryGirl literally everywhere. If you need an 
 
 **Do not commit a production secret to the repo**. Use environment variables instead.
 
-Test everything. While tests might seem useless, they are our only tool against technical debt and regression. Testing safeguards your code while still allowing others to edit it and add on to it.
+Test everything. While tests might seem useless, they are our only tool against technical debt and regression. Testing safeguards your code's functionality while still allowing others to edit it and add on to it.
 
 Spread out logic. Don't put logic in the controller that should be in the view or model.
 
-Only test what the controller does in a controller spec. Don't waste time testing CanCanCan functionality.
+Only test what the controller does in a controller spec. Don't waste time testing what CanCanCan does.
+
+The only way you're going to learn is by diving in. Don't be scared of messing up, it happens to everyone. Remember, failing is gaining experience. Making mistakes is essential to growth.
