@@ -26,6 +26,8 @@ gem 'has_secure_token', '~> 1.0.0'
 ### Controllers and Application Logic
 ###
 
+# Use respond_to in controller and respond_with
+gem 'responders', '~> 2.3.0'
 # Authorization from CanCanCan
 gem 'cancancan', '~> 1.15.0'
 
