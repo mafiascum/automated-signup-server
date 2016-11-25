@@ -1,6 +1,5 @@
 FactoryGirl.define do
   factory :user do
-    role 1
-    token "MyString"
+    role :player
   end
 end
