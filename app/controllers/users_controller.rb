@@ -1,6 +1,7 @@
 # Controller to manage our user resource and login users
 class UsersController < ApplicationController
-  load_and_authorize_resource
+  skip_before_action :authenticate, only: :authenticate_with_sid
+  load_and_authorize_resource except: :authenticate_with_sid
 
   def index
     respond_with @users
@@ -17,6 +18,9 @@ class UsersController < ApplicationController
   def reset_token
     @user.regenerate_token
     head :ok
+  end
+
+  def authenticate_with_sid
   end
 
   private
