@@ -7,6 +7,8 @@ class Ability
 
     if user.admin?
       can :manage, User
+
+      can :manage, GameQueue
     elsif user.listmod?
 
     end
