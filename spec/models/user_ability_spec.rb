@@ -14,6 +14,10 @@ RSpec.describe User, type: :model do
     it 'can manage users' do
       is_expected.to be_able_to(:manage, User.new)
     end
+
+    it 'can manage game queues' do
+      is_expected.to be_able_to(:manage, GameQueue.new)
+    end
   end
 
   context 'as a player' do
