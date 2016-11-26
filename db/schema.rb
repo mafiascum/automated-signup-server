@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 20161126171856) do
   create_table "game_queues", force: :cascade do |t|
     t.datetime "created_at", null: false
+    t.string "description"
     t.integer "forum_id"
     t.string "name"
     t.datetime "updated_at", null: false

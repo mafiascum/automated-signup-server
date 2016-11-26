@@ -17,6 +17,14 @@ RSpec.describe GameQueue, type: :model do
     expect(FactoryGirl.build(:game_queue, name: 'a' * 65)).not_to be_valid
   end
 
+  it 'is invalid without a description' do
+    expect(FactoryGirl.build(:game_queue, description: nil)).not_to be_valid
+  end
+
+  it 'is invalid with a description over 128 characters' do
+    expect(FactoryGirl.build(:game_queue, description: 'a' * 129)).not_to be_valid
+  end
+
   it 'is invalid without a forum id' do
     expect(FactoryGirl.build(:game_queue, forum_id: nil)).not_to be_valid
   end
