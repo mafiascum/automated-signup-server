@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       put :reset_token
     end
   end
-
   post '/authenticate', to: 'users#authenticate_with_sid'
+
+  resources :game_queues
 end
