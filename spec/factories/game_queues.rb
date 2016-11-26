@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :game_queue do
     sequence(:name) { |n| "Queue #{n}" }
-    forum_id 1
+    sequence(:forum_id) { |n| n }
   end
 end
