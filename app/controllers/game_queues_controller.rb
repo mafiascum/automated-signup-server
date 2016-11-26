@@ -1,0 +1,2 @@
+class GameQueuesController < ApplicationController
+end
