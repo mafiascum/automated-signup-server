@@ -15,6 +15,17 @@ RSpec.describe GameQueuesController, type: :controller do
     {name: nil, description: nil, forum_id: nil}
   end
 
+  describe '.authorization' do
+    context 'lacks permissions' do
+      login_player
+
+      it 'returns HTTP status 403' do
+        get :index
+        expect(response).to have_http_status(:forbidden)
+      end
+    end
+  end
+
   describe '#index' do
     before do
       game_queue.reload
